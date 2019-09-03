@@ -9,7 +9,7 @@ public class MomentJsFormatter {
     private static final char UPPERCASE_D = 'D';
     private static final char UPPERCASE_Y = 'Y';
 
-    private static final char LOWERCASE_A = 'A';
+    private static final char LOWERCASE_A = 'a';
     private static final char LOWERCASE_D = 'd';
     private static final char LOWERCASE_Y = 'y';
 

@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Clock;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -31,7 +32,8 @@ public class FormatTester {
         System.out.println(Arrays.toString(elements));
         LocalDateTime triggerTime = LocalDateTime.ofInstant(
                 Instant.ofEpochMilli(timestamp),
-                TimeZone.getDefault().toZoneId()
+                Clock.systemUTC().getZone()
+
         );
 
         Assertions.assertEquals(momentJsFormattedDateTime, MomentJsFormatter.format(triggerTime, momentJsFormatString));

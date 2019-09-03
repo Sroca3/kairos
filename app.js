@@ -25,12 +25,12 @@ function setupTestCaseFile() {
 
 function addTestCase(format, unixTimestamp) {
     if (!unixTimestamp) {
-        unixTimestamp = moment().valueOf();
+        unixTimestamp = moment().utc().valueOf();
     }
     let testCaseData = "Test Case #" + testCaseCounter + ": " +
-        moment(unixTimestamp).valueOf() + ", " +
+        moment(unixTimestamp).utc().valueOf() + ", " +
         format + ", " +
-        moment(unixTimestamp).format(format);
+        moment(unixTimestamp).utc().format(format);
     console.log(testCaseData);
     fs.appendFile(TEST_FILE_NAME, testCaseData + "\n", (err) => {
         if (err) {
