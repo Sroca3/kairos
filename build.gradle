@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.sroca3'
-version '0.1.0'
+version '0.2.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
@@ -35,7 +35,7 @@ javadoc {
 task sourceJar(type: Jar) {
     classifier = 'sources'
     from sourceSets.main.allJava
-}
+}0
 
 task javadocJar(type: Jar) {
     from javadoc
