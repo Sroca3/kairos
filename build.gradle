@@ -35,7 +35,7 @@ javadoc {
 task sourceJar(type: Jar) {
     classifier = 'sources'
     from sourceSets.main.allJava
-}0
+}
 
 task javadocJar(type: Jar) {
     from javadoc
